@@ -17,7 +17,9 @@
 令$DP[i][j]$表示考虑前$i$个工匠、粉刷不超过前$j$块木板（其中有的可以不粉刷）的最大报酬，可以得到转移方程为：
 
 $$
+
 dp[i][j] = max\{dp[i - 1][k] + P_i * (j - k))\},j \geq S_i,j - L_i \leq k \leq S_i - 1
+
 $$
 根据该式可以写出第一版代码：
 
@@ -156,9 +158,12 @@ int main()
 
 将转移方程写成如下形式：
 
+$$ 
+
+dp[i][j] = P_i * j + max\{dp[i - 1][k] - P_i * k\},j \geq S_i,j - L_i \leq k \leq S_i - 1 
+
 $$
-dp[i][j] = P_i * j + max\{dp[i - 1][k] - P_i * k\},j \geq S_i,j - L_i \leq k \leq S_i - 1
-$$
+
 这时假设有两个元素$k_1,k_2,k_1 < k_2$，那么当$dp[i - 1][k_1] - P_i * k_1 \leq dp[i - 1][k_2] - P_i * k_2$时，$k_1$是一个没有贡献的答案，可以直接舍弃。
 
 代码也是类似的：
