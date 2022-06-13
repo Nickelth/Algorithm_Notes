@@ -1,6 +1,5 @@
 # 单调队列优化DP
 
-    ![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
 
 [例题](https://www.acwing.com/problem/content/300/)
 
@@ -19,10 +18,10 @@
 令$DP[i][j]$表示考虑前$i$个工匠、粉刷不超过前$j$块木板（其中有的可以不粉刷）的最大报酬，可以得到转移方程为：
 
 $$
-
 dp[i][j] = max\{dp[i - 1][k] + P_i * (j - k))\},j \geq S_i,j - L_i \leq k \leq S_i - 1
-
 $$
+
+
 根据该式可以写出第一版代码：
 
 ```cpp
