@@ -1,5 +1,7 @@
 # 单调队列优化DP
 
+    ![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
+
 [例题](https://www.acwing.com/problem/content/300/)
 
 题目大意：
