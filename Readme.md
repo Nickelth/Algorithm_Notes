@@ -1,0 +1,1 @@
+如果想要在$Github$网页端直接查看笔记，建议安装[Github With MathJax](https://github.com/orsharir/github-mathjax)插件，否则一些公式可能无法正确显示
